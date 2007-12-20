@@ -13,6 +13,7 @@ Summary:	Perl extension for generating Globally/Universally Unique Identifiers
 Url:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/Data/%{module}-%{up_version}.tar.bz2
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Perl extension for generating Globally/Universally Unique Identifiers
