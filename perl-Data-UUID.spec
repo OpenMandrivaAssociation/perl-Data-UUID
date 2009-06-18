@@ -1,6 +1,6 @@
 %define module	Data-UUID
 %define name	perl-%{module}
-%define version 1.201
+%define version 1.202
 %define up_version 0.148
 %define release %mkrel 1
 
