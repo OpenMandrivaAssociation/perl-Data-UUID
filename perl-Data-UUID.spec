@@ -1,26 +1,25 @@
-%define module	Data-UUID
-%define name	perl-%{module}
-%define version 1.202
-%define up_version 0.148
-%define release %mkrel 1
+%define upstream_name	 Data-UUID
+%define upstream_version 1.202
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
-Group:		Development/Perl
-Summary:	Perl extension for generating Globally/Universally Unique Identifiers
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Data/%{module}-%{up_version}.tar.bz2
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
+Summary: Perl extension for generating Globally/Universally Unique Identifiers
+License: GPL+ or Artistic
+Group:	 Development/Perl
+Url:     http://search.cpan.org/dist/%{upstream_name}
+Source0: http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+
+BuildRequires: perl-devel
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Perl extension for generating Globally/Universally Unique Identifiers
 (GUIDs/UUIDs).
 
 %prep
-%setup -q -n %{module}-%{up_version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
