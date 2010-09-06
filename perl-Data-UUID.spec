@@ -1,9 +1,9 @@
 %define upstream_name	 Data-UUID
-%define upstream_version 1.215
+%define upstream_version 1.216
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 3
+Release:	%mkrel 1
 
 Summary: Perl extension for generating Globally/Universally Unique Identifiers
 License: GPL+ or Artistic
