@@ -1,5 +1,5 @@
 %define upstream_name	 Data-UUID
-%define upstream_version 1.216
+%define upstream_version 1.217
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
