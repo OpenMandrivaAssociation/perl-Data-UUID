@@ -13,8 +13,6 @@ Source0: http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_
 
 BuildRequires: perl-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
-# temporary dep due to the perl-5.14 bump
-BuildRequires:	perl-List-MoreUtils >= 0.320.0-4
 
 %description
 Perl extension for generating Globally/Universally Unique Identifiers
