@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 4
+Release:	%mkrel 5
 
 Summary: Perl extension for generating Globally/Universally Unique Identifiers
 License: GPL+ or Artistic
