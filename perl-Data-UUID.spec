@@ -1,9 +1,9 @@
 %define upstream_name	 Data-UUID
-%define upstream_version 1.217
+%define upstream_version 1.218
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 5
+Release:	%mkrel 1
 
 Summary: Perl extension for generating Globally/Universally Unique Identifiers
 License: GPL+ or Artistic
@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.218.0-1
+- new version
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.217.0-5mdv2012.0
 + Revision: 765147
 - rebuilt for perl-5.14.2
