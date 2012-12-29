@@ -1,52 +1,44 @@
-%define upstream_name	 Data-UUID
-%define upstream_version 1.218
+%define	modname	Data-UUID
+%define	modver	1.218
 
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 1
+Name:		perl-%{modname}
+Version:	%{perl_convert_version %{modver}}
+Release:	1
 
-Summary: Perl extension for generating Globally/Universally Unique Identifiers
-License: GPL+ or Artistic
-Group:	 Development/Perl
-Url:     http://search.cpan.org/dist/%{upstream_name}
-Source0: http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Perl extension for generating Globally/Universally Unique Identifiers
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Data/%{modname}-%{modver}.tar.gz
 
-BuildRequires: perl-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
 
 %description
 Perl extension for generating Globally/Universally Unique Identifiers
 (GUIDs/UUIDs).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{modname}-%{modver}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
+perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 %make
 
 %check
-%{__make} test
+make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc Changes README 
 %{perl_vendorarch}/Data
 %{perl_vendorarch}/auto/Data
 %{_mandir}/man3/*
 
-
-
-
 %changelog
-* Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.218.0-1
+* Sat Dec 29 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 1.218.0-1
+- cleanups
 - new version
 
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.217.0-5mdv2012.0
@@ -158,7 +150,7 @@ rm -rf %{buildroot}
 - New release 0.13
 - spec cleanup
 - drop patch0 (merged upstream)
-è fix directory ownership
+- fix directory ownership
 
 * Sat Jan 21 2006 Michael Scherer <misc@mandriva.org> 0.11-4mdk
 - fix build on amd64 ( patch0 )
@@ -174,4 +166,3 @@ rm -rf %{buildroot}
 
 * Thu Apr 29 2004 Michael Scherer <misc@mandrake.org> 0.11-1mdk
 - First MandrakeSoft Package
-
