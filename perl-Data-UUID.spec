@@ -4,7 +4,7 @@
 Summary:	Perl extension for generating Globally/Universally Unique Identifiers
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
