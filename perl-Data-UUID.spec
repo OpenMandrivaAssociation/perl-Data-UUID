@@ -1,14 +1,14 @@
 %define	modname	Data-UUID
-%define modver 1.219
+%define modver 1.220
 
 Summary:	Perl extension for generating Globally/Universally Unique Identifiers
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Data/Data-UUID-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Data/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl-devel
 
 %description
@@ -33,5 +33,3 @@ perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 %{perl_vendorarch}/Data
 %{perl_vendorarch}/auto/Data
 %{_mandir}/man3/*
-
-
