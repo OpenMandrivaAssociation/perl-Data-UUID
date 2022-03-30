@@ -1,4 +1,7 @@
-%define	modname	Data-UUID
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
+%define modname Data-UUID
 %define modver 1.224
 
 Summary:	Perl extension for generating Globally/Universally Unique Identifiers
@@ -17,7 +20,7 @@ Perl extension for generating Globally/Universally Unique Identifiers
 (GUIDs/UUIDs).
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -n %{modname}-%{modver} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor < /dev/null
@@ -30,6 +33,4 @@ perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 %doc Changes README 
 %{perl_vendorarch}/Data
 %{perl_vendorarch}/auto/Data
-%{_mandir}/man3/*
-
-
+%doc %{_mandir}/man3/*
