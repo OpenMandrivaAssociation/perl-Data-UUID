@@ -10,7 +10,7 @@ Version:	%perl_convert_version %{modver}
 Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Data/Data-UUID-%{modver}.tar.gz
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
